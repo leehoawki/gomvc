@@ -19,7 +19,6 @@ func main() {
 	})
 
 	r.GET("/hello", func(c *mvc.Context) {
-		// expect /hello?name=geektutu
 		c.String(http.StatusOK, "hello %s, you're at %s\n", c.Query("name"), c.Path)
 	})
 
